@@ -2,6 +2,7 @@
 
 🔗 [Repositorio de midudev](https://github.com/midudev/aprendiendo-react/tree/master/projects/04-react-prueba-tecnica) <br/>
 ⏯️ [Curso de React](https://www.youtube.com/watch?v=XYpadB4VadY) <br/>
+⏯️ [Curso de React](https://www.youtube.com/watch?v=x-LcbVw99o8) <br/>
 ☁️ [Web](https://midu-react-04.surge.sh/)
 
 ## Enunciado
@@ -14,3 +15,8 @@ APIs:
 
 - [Facts Random](https://catfact.ninja/fact)
 - [Imagen random](https://cataas.com/cat/says/hello)
+
+## Objetivos de aprendizaje:
+
+* Custom Hooks
+* Testing con Playwright
