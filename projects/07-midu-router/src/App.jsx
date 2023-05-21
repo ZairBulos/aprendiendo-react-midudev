@@ -1,7 +1,6 @@
 import { Suspense, lazy } from "react";
 
 import SearchPage from "./pages/Search.jsx";
-
 import Route from "./components/Route.jsx";
 import Router from "./components/Router.jsx";
 

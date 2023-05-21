@@ -1,21 +1,22 @@
 import { useEffect, useState, Children } from "react";
-import { EVENTS } from "../../consts";
+import { EVENTS } from "../consts";
 import { match } from "path-to-regexp";
+import { getCurrentPath } from "../util";
 
 function Router({ children, routes = [], defaultComponent: DefaultComponent }) {
-    const [currentPath, setCurrentPath] = useState(window.location.pathname);
+    const [currentPath, setCurrentPath] = useState(getCurrentPath());
 
     useEffect(() => {
         const onLocationChange = () => {
-            setCurrentPath(window.location.pathname);
+            setCurrentPath(getCurrentPath());
         };
         
         window.addEventListener(EVENTS.PUSHSTATE, onLocationChange);
         window.addEventListener(EVENTS.POPSTATE, onLocationChange);
 
         return () => {
-        window.removeEventListener(EVENTS.PUSHSTATE, onLocationChange);
-        window.removeEventListener(EVENTS.POPSTATE, onLocationChange);
+            window.removeEventListener(EVENTS.PUSHSTATE, onLocationChange);
+            window.removeEventListener(EVENTS.POPSTATE, onLocationChange);
         }
     }, []);
 
